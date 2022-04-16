@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+  <title>Saku - Inicio</title>
+</head>
+
+<body>
+  <script src="./scripts/index.js"></script>
+  <section class="section-index">
+    <img class="img-background" src="./imgs/pkmns.png" alt="">
+    <div class="div-filters">
+      <div class="div-price-filter">
+        <label for="">Precio</label>
+        <a href="" onclick="sortByPrice(80000)">Hasta $80.000</a>
+        <a href="" onclick="sortByPrice(80000,250000)">De $80.000 a $250.000</a>
+        <a href="" onclick="sortByPrice(250000,1000000)">Más de $250.000</a>
+        <a href="" onclick="sortByPrice(1000000)">Todos</a>
+      </div>
+      <div class="div-categories-filter">
+        <label for="">Categorias</label>
+        <a href="">Sorpresas</a>
+      </div>
+      <div class="div-brands-filter">
+        <label for="">Marcas</label>
+        <a href="" onclick="sortByBrand('Saku')">Saku</a>
+        <a href="" onclick="sortByBrand('Doki')">Doki</a>
+        <a href="" onclick="sortByBrand('Dudu')">Dudu</a>
+        <a href="" onclick="sortByBrand('Todos')">Todos</a>
+      </div>
+    </div>
+    <div class="div-product-list">
+
+    </div>
+  </section>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script>
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+  apiKey: "AIzaSyD5V8fOqt6TMXHo9JWDJMGJNKEH6Zs5lcM",
+  authDomain: "saku-e4dc3.firebaseapp.com",
+  projectId: "saku-e4dc3",
+  storageBucket: "saku-e4dc3.appspot.com",
+  messagingSenderId: "815924175368",
+  appId: "1:815924175368:web:c168b936dd3b4798f867bd"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="./scripts/footer.js"></script>
+</body>
+
+</html>
