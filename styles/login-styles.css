@@ -1,0 +1,105 @@
+*{
+  font-family: Oswald;
+}
+
+
+
+/* body */
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-image: url(../imgs/fondo_login.png);
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+/* information */
+h1{
+  font-size: 64px;
+  color: #FFFFFF;
+}
+/* form */
+
+  /* inputs */
+  
+  input[type=email], input[type=password] {
+    background: none;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #D23B53;
+    box-sizing: border-box;
+  }
+  
+  /* style for all buttons */
+  .div-buttons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  .div-buttons .input-login{
+    background-color: #FFFAF9;
+    color: #D23B53;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #D23B53 ;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+    margin-right: 30px;
+  }
+  .div-buttons .input-register{
+    display: flex;
+    justify-content: center;
+    background-color: #D23B53;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #D23B53;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+  }
+  
+  /* Add a hover effect for buttons */
+  .input-login:hover , .input-register:hover {
+    opacity: 0.8;
+  }
+  /* label */
+  label{
+    color: #D23B53;
+    font-size: 20px;
+  }
+ 
+  /* Add padding to containers */
+  .div-information {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  a.a-psw {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    color: #D23B53;
+  }
+  
+   img.logo{
+    position: fixed;
+    align-self: flex-end;
+    width: 206px;
+    height: 183px;
+  }
+
+
+  @media screen and(max-width:1200px) {
+    
+  }
+  
+  @media screen and(max-width:720px) {
+      
+  }
