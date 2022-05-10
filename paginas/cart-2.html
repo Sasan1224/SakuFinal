@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/cart-2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saku - Inicio</title>
+</head>
+<body>
+    <script src="../scripts/index.js"></script>
+    <section class="section-cart-two">
+        <div class="div-cart-line">
+        </div>
+        <div class="div-purchase-resume">
+            <div class="div-items">
+                <div class="div-title-items">
+                    <p>Metodos de pago</p>
+                </div>
+                <div class="div-item-list">
+                    <div>
+                        <p class="p-payment-methods">Elige tus opciones de pago</p>
+                        <p>Selecciona el metodo de pago deseado para continuar con el pedido.</p>
+                    </div>
+                    <div class="div-payment-methods">
+                        <div><img src="../imgs/paypal.svg" alt=""><div><input type="radio" name="methods" value="paypal"><label for="paypal">Paypal</label></div></div>
+                        <div><img src="../imgs/pse.svg" alt=""><div><input type="radio" name="methods" value="pse"><label for="pse">PSE</label></div></div>
+                        <div><img src="../imgs/cryptos.svg" alt=""><div><input type="radio" name="methods" value="criptomonedas"><label for="criptomonedas">Criptomonedas</label></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="div-price-info">
+                <div class="div-price">
+                    <div class="div-price-title">
+                        <img src="../imgs/shop.svg" alt="">
+                        <p>Resumen de tu orden</p>
+                    </div>
+                    <div class="div-prices">
+                        <p><span>Sub-total compra</span>$<span id="span-sub-total">0</span></p>
+                        <p><span>Despacho</span>$<span>15000</span></p>
+                        <p><span>Descuento despacho</span><span id="span-delivery">0</span></p>
+                        <p><span>Monto final a pagar</span>$<span id="span-total">0</span></p>
+                    </div>
+                    <div class="div-back-button">
+                        <img src="../imgs/purchase-bag.svg" alt="">
+                        <a id="a-back-button" onclick="goBack()">Volver a la bolsa</a>
+                    </div>
+                </div>
+                <div class="div-info-payment">
+
+                </div>
+            </div>
+        </div>
+        <button class="button-pay-button">CONTINUAR</button>
+
+    </section>
+    <script src="../scripts/footer.js"></script>
+    <script src="../scripts/cart-2.js"></script>
+</body>
+</html>
