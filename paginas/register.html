@@ -14,7 +14,7 @@
         <h1>Registrarse</h1>
     </div>
     <div class="div-login">
-        <form>
+        <form class="registerForm">
             <!--Correo-->
             <label for="email">Correo:</label>
             <input type="email" name="correo" id="email">
@@ -28,6 +28,26 @@
             <a class="a-psw" href="#">¿Ya tienes una cuenta?</a>
         </form>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script>
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD5V8fOqt6TMXHo9JWDJMGJNKEH6Zs5lcM",
+            authDomain: "saku-e4dc3.firebaseapp.com",
+            projectId: "saku-e4dc3",
+            storageBucket: "saku-e4dc3.appspot.com",
+            messagingSenderId: "815924175368",
+            appId: "1:815924175368:web:c168b936dd3b4798f867bd"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="../scripts/register.js"></script>
 </body>
 <img class="logo" src="../imgs/logosaku.png" alt="logotipo">
 </html>
