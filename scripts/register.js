@@ -13,3 +13,7 @@ formRegister.addEventListener("submit",async function(event){
     alert("Registrado con exito!");
     window.location.href = "../paginas/login.html";
 })
+
+document.querySelector(".a-psw").addEventListener('click',function(){
+    window.location.href = "../paginas/login.html"
+})

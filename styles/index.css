@@ -59,7 +59,13 @@
     border-left: 1px solid white;
 }
 
+.div-navbar-interactions{
+    display: flex;
+    align-items: center;
+}
+
 .section-navbar .div-navbar .div-black-stripe .div-navbar-interactions img {
+    width: 40px;
     margin: 0 10px;
 }
 
@@ -210,10 +216,10 @@ button:hover {
 }
 
 
-@media screen and(max-width:1200px) {
+@media (max-width:1200px) {
     
 }
 
-@media screen and(max-width:720px) {
+@media (max-width:720px) {
     
 }

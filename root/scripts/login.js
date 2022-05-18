@@ -48,6 +48,6 @@ if(!user){
     }    
 
 }else{
-    window.location.href = "../paginas/index.html";
+    window.location.href = "../index.html";
 }
 

@@ -2,10 +2,6 @@ var url = window.location.href;
 
 var db;
 
-setTimeout(() => {
-    db = firebase.firestore();
-}, 0)
-
 const user = JSON.parse(localStorage.getItem("user"));
 
 function goHome() {
@@ -18,8 +14,17 @@ function goProducts() {
         window.location.href = '../index.html'
 }
 
+function goLogin() {
+    if(!localStorage.getItem('user')){
+        alert("Por favor logueese primero");
+        window.location.href = './paginas/login.html'
+    }
+}
+
+goLogin();
+
 if (!url.includes("index")) {
-    document.body.innerHTML += '<section class="section-navbar"> <div class="div-navbar"> <div class="div-black-stripe"> <img src="../imgs/saku_logo.svg" width="105" height="90" alt="" class="navbar-icon"> <div class="div-navbar-options"> <ul class="div-options-list"> <li><a href="../index.html" onclick="goHome()">Inicio</a></li> <li class="li-products-option"><a href="" onclick="goHome()">Productos</a></li> <li><a href="">Nosotros</a></li> </ul> </div> <div class="div-navbar-interactions"> <img src="../imgs/cart.svg" class="img-cart-link"></img> <img src="../imgs/profile.svg" class="img-user-link"></img> </div> </div> <div class="div-red-stripe"> <p><b>ENVIO GRATIS</b> POR COMPRAS SUPERIORES A <b>$200.000 </b></p> <a class="a-continue-purchase" onclick="goHome()">SEGUIR COMPRANDO >></a> </div> </div> </section>';
+    document.body.innerHTML += '<section class="section-navbar"> <div class="div-navbar"> <div class="div-black-stripe"> <img src="../imgs/saku_logo.svg" width="105" height="90" alt="" class="navbar-icon"> <div class="div-navbar-options"> <ul class="div-options-list"> <li><a href="../index.html" onclick="goHome()">Inicio</a></li> <li class="li-products-option"><a href="" onclick="goHome()">Productos</a></li> <li><a href="">Nosotros</a></li> </ul> </div> <div class="div-navbar-interactions"> <img src="../imgs/cart.svg" class="img-cart-link"></img> <img src="../imgs/profile.svg" class="img-user-link"></img><img src="../imgs/logout.png" class="img-logout-link"> </div> </div> <div class="div-red-stripe"> <p><b>ENVIO GRATIS</b> POR COMPRAS SUPERIORES A <b>$200.000 </b></p> <a class="a-continue-purchase" onclick="goHome()">SEGUIR COMPRANDO >></a> </div> </div> </section>';
     document.head.innerHTML += '<link rel="stylesheet" href="../styles/index.css">';
 
     document.querySelector(".img-user-link").addEventListener('click', function () {
@@ -32,7 +37,7 @@ if (!url.includes("index")) {
         window.location.href = url;
     });
 } else {
-    document.body.innerHTML += '<section class="section-navbar"> <div class="div-navbar"> <div class="div-black-stripe"> <img src="./imgs/saku_logo.svg" width="105" height="90" alt="" class="navbar-icon"> <div class="div-navbar-options"> <ul class="div-options-list"> <li><a href="./index.html" onclick="goHome()">Inicio</a></li> <li class="li-products-option"><a href="" onclick="goHome()">Productos</a></li> <li><a href="">Nosotros</a></li> </ul> </div> <div class="div-navbar-interactions"> <img src="./imgs/cart.svg" class="img-cart-link"></img> <img src="./imgs/profile.svg" class="img-user-link"></img> </div> </div> <div class="div-red-stripe"> <p><b>ENVIO GRATIS</b> POR COMPRAS SUPERIORES A <b>$200.000 </b></p> <a class="a-continue-purchase" onclick="goHome()">SEGUIR COMPRANDO >></a> </div> </div> </section>';
+    document.body.innerHTML += '<section class="section-navbar"> <div class="div-navbar"> <div class="div-black-stripe"> <img src="./imgs/saku_logo.svg" width="105" height="90" alt="" class="navbar-icon"> <div class="div-navbar-options"> <ul class="div-options-list"> <li><a href="./index.html" onclick="goHome()">Inicio</a></li> <li class="li-products-option"><a href="" onclick="goHome()">Productos</a></li> <li><a href="">Nosotros</a></li> </ul> </div> <div class="div-navbar-interactions"> <img src="./imgs/cart.svg" class="img-cart-link"></img> <img src="./imgs/profile.svg" class="img-user-link"></img><img src="./imgs/logout.png" class="img-logout-link"> </div> </div> <div class="div-red-stripe"> <p><b>ENVIO GRATIS</b> POR COMPRAS SUPERIORES A <b>$200.000 </b></p> <a class="a-continue-purchase" onclick="goHome()">SEGUIR COMPRANDO >></a> </div> </div> </section>';
     document.head.innerHTML += '<link rel="stylesheet" href="./styles/index.css">';
     document.querySelector(".img-user-link").addEventListener('click', function () {
         url = "./paginas/login.html";
@@ -43,6 +48,14 @@ if (!url.includes("index")) {
         url = "./paginas/cart-1.html";
         window.location.href = url;
     });
+
+    document.querySelector(".img-logout-link").addEventListener('click', function () {
+        localStorage.clear();
+        url = "./paginas/login.html";
+        window.location.href = url;
+    });
+
+
 
     const products = [
         {
